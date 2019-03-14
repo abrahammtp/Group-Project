@@ -1,0 +1,55 @@
+.jumbotron {
+    background-image: linear-gradient(to bottom right, red, black);
+    height: 200px;
+}
+
+.jumtrotron-h-one {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+.jumbrotronp {
+    text-align: center;
+    color:white;
+    text-shadow: 2px 2px 8px black;
+}
+/* button styling for jumbotron */
+.btn{
+    margin-right:10px;
+}
+.btn-outline-primary{
+  border-color: white;
+  color:white;
+  background-color:transparent;
+  margin-top:30px;
+  font-weight:100;
+}
+.btn-outline-primary:hover{
+  border-color: transparent;
+  color:black;
+  background-color:white;
+}
+.btn-outline-primary:active{
+  border-color: transparent;
+  color:black;
+  background-color:white;
+  padding:9px 20px 9px 20px;
+}
+
+/* BUTTON HEADER RIGHT */
+.rightHeader{
+    position: absolute;
+    top: -15px;
+    right: 8px;
+  }
+  /* BUTTON HEADER LEFT */
+  .leftHeader{
+    position: absolute;
+    top: -15px;
+    left: 20px;
+  }
+  
+  .container a {
+    text-decoration: none;
+  }
