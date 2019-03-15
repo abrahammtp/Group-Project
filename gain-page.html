@@ -49,46 +49,25 @@
                 <h2>
                     <center>Suggested Workouts For Your Goals</center>
                 </h2><br>
+                <br>
+                <!-- Exercises Form -->
+                <form id="exercise-form">
+                    <label for="exercise-input">What food do you want to try?</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="exercise-input" type="text" class="form-control" placeholder="ex: Biceps Workouts ">
+                        <button id="add-exercise" type="button" class="btn btn-warning">Submit</button>
+                    </div>
+                </form>
 
-                <!-- carousel for youtbve videos -->
-                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                <!-- carousel for youtube videos -->
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="embed-responsive embed-responsive-4by3">
                                 <iframe class="embed-responsive-item" iframe width=" 560" height="315"
-                                    src="https://www.youtube.com/embed/VB6SIKl8Md0" frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="embed-responsive embed-responsive-4by3">
-                                <iframe class="embed-responsive-item" iframe width=" 560" height="315"
-                                    src="https://www.youtube.com/embed/IIfw9kAbMlc" frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="embed-responsive embed-responsive-4by3">
-                                <iframe class="embed-responsive-item" width="560" height="315"
-                                    src="https://www.youtube.com/embed/pJ5FD9_Orbg" frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="embed-responsive embed-responsive-4by3">
-                                <iframe class="embed-responsive-item" width="560" height="315"
-                                    src="https://www.youtube.com/embed/jK2hS40pr-g" frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="embed-responsive embed-responsive-4by3">
-                                <iframe class="embed-responsive-item" width="560" height="315"
-                                    src="https://www.youtube.com/embed/5m9A1bRnGBg" frameborder="0"
+                                    src="https://www.youtube.com/embed/Yz7Ofr9z1co" frameborder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
                             </div>
@@ -111,15 +90,15 @@
                     <center>Suggested Recipes To Hit Daily Caloric Intake</center>
                 </h2>
                 <form id="recipe-form">
-                        <label for="recipeinput">What food do you want to try?</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                            </div>
-                            <input id="recipeinput" type="text" class="form-control" 
-                                placeholder="ex: Vegan Pasta ">
+                    <label for="recipeinput">What food do you want to try?</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input id="recipeinput" type="text" class="form-control" placeholder="ex: Vegan Pasta ">
                         <button id="add-recipe" type="button" class="btn btn-warning">Submit</button>
-                    </div></form>
-                    <div id="recipes"></div>
+                    </div>
+                </form>
+                <div id="recipes"></div>
             </div>
             <div class="row">
                 <div class="col-sm-6"><br><br></div>
