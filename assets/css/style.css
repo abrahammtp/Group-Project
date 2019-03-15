@@ -58,3 +58,22 @@
     width:640px;
     height:360px;
   }
+
+  #recipes {
+    max-width:40%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+
+  .recipetext{
+    font-size: 5px;
+  }
+
+  .recipeimages {
+    display: flex;
+    flex-wrap: wrap;
+    max-width:120px;
+    max-height: 100px;
+    overflow: auto;
+  }

@@ -34,18 +34,18 @@ $(document).ready(function () {
                 newItemdiv.append(dataImage),
 
             )
-            $("#test").append(results[i].recipe.label + " Recipe:")
-            $("#test").append(link)
-            $('#userinput').val("");
+            $("#recipes").append(results[i].recipe.label + " Recipe:")
+            $("#recipes").append(link)
+            $('#recipe-input').val("");
 
     }
 })
 
-    $("#button").on("click", function (event) {
-        $("#test").empty();
+    $("#add-recipe").on("click", function (event) {
+        $("#recipes").empty();
         event.preventDefault();
 
-        search = $("#userinput").val().trim();
+        search = $("#recipeinput").val().trim();
 
 
         console.log("hello")
@@ -67,19 +67,20 @@ $(document).ready(function () {
 
                 var dataImage = $("<img>");
                 dataImage.attr("src", results[i].recipe.image)
-                // dataImage.attr("href ='",  results[i].recipe.url);
-
+                dataImage.addClass("recipeimages")
 
                 var newItemdiv = $('<div class="newItem">');
-                var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>").append(
+                var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>");
+                var recipetext = ("<p id='recipetext'>" + results[i].recipe.label + " Recipe: </p>")
+                        
+                
+                link.append(newItemdiv)
+                newItemdiv.append(recipetext)
+                newItemdiv.append(dataImage)
 
 
-                    newItemdiv.append(dataImage),
-
-                )
-                $("#test").append(results[i].recipe.label + " Recipe:")
-                $("#test").append(link)
-                $('#userinput').val("");
+                $("#recipes").append(link)
+                $('#recipeinput').val("");
             }
         });
 
