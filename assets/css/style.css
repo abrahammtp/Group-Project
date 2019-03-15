@@ -53,3 +53,8 @@
   .container a {
     text-decoration: none;
   }
+
+  #carousel {
+    width:640px;
+    height:360px;
+  }
