@@ -1,6 +1,6 @@
 .jumbotron {
     background-image: linear-gradient(to bottom right, red, black);
-    height: 200px;
+    height: 200px; 
 }
 
 .jumtrotron-h-one {
@@ -58,3 +58,47 @@
     width:640px;
     height:360px;
   }
+
+.footer {
+  background: black;
+ height: 60px;
+  text-align: center;
+  /* position: fixed; */
+  
+}
+
+.rowone {
+  margin-left: 15px;
+  border:1px solid red;
+}
+
+.col-sm {
+  border: 2px solid red;
+  margin-right: 15px;
+  margin-bottom: 80px;
+  border-radius: 2em;
+  background: grey;
+}
+
+.footerp {
+  color: white;
+  text-align: center;
+}
+
+body {
+  background: black;
+}
+
+p {
+  color: white;
+}
+
+h3 {
+  color: white;
+  text-shadow: 2px 2px 8px red;
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 2px 8px red;
+}
