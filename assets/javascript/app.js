@@ -1,52 +1,39 @@
-var restrictions;
-var calories;
+// Abraham's work, YouTube's API
 
 var search;
+
 $(document).ready(function () {
-    $("#button").on("click", function (event) {
-        $("#test").empty();
+
+    $("#add-exercise").on("click", function (event) {
+        // $("#exercise-input").empty();
         event.preventDefault();
 
-        search = $("#userinput").val().trim();
+        search = $("#exercise-input").val().trim();
+        console.log("hello " + search);
 
-
-        console.log("hello")
-
-        console.log(search)
-        var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + search + "&app_id=19a5b37e&app_key=4dfc6f3ac6f5ba472fd75d9f42924272&from=0&to=4"
+        var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&order=relevance&q=" + search + "&relevanceLanguage=en&safeSearch=none&topicId=%2Fm%2F027x7n&type=video&videoCaption=none&videoCategoryId=17&videoDefinition=any&videoDimension=any&videoDuration=medium&videoEmbeddable=true&key=AIzaSyB-DpMfCWMG2x1j2BpAIGxFMhATO4zE5jg";
 
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
+        
+            var results = response.items;
+            console.log(results);
 
-            var results = response.hits
-            console.log(results)
+            for (let i = 0; i < results.length; i++) {
+                
+                // var videoDiv = $('<iframe>');
+                var dataVideo = $("<iframe width='560' height='315' class='embed-responsive-item' src='https://www.youtube.com/embed/" + results[i].id.videoId + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
 
-
-
-            for (var i = 0; i < results.length; i++) {
-
-                var dataImage = $("<img>");
-                dataImage.attr("src", results[i].recipe.image)
-                // dataImage.attr("href ='",  results[i].recipe.url);
-
-
-                var newItemdiv = $('<div class="newItem">');
-                var recipe = results[i].recipe.label;
-                var divRecipe = $("<p>").text(recipe + " recipe: ");
-                var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>").append(
-
-                    
-                    newItemdiv.append(dataImage),
-
-)
-                    $("#test").append(results[i].recipe.label + " Recipe:")
-                    $("#test").append(link)
-            $('#userinput').val("");  
+                $(".embed-responsive-16by9").append(dataVideo);
             }
-        });
+        });  
 
-    });
+        $("#exercise-input").val("");
 
-});
+
+    })
+
+})     
+
