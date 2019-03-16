@@ -1,12 +1,14 @@
 .jumbotron {
     background-image: linear-gradient(to bottom right, red, black);
     height: 200px; 
+   
 }
 
 .jumtrotron-h-one {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 8px black;
+
 }
 
 .jumbrotronp {
@@ -79,13 +81,7 @@
     overflow: auto;
   }
 
-.footer {
-  background: black;
- height: 60px;
-  text-align: center;
-  /* position: fixed; */
-  
-}
+
 
 .rowone {
   margin-left: 15px;
@@ -94,16 +90,13 @@
 
 .col-sm {
   border: 2px solid red;
-  margin-right: 15px;
+  margin-right: 20px;
   margin-bottom: 80px;
-  border-radius: 2em;
+  border-radius: 2.5em;
   background: grey;
 }
 
-.footerp {
-  color: white;
-  text-align: center;
-}
+
 
 body {
   background: black;
@@ -123,3 +116,30 @@ h1 {
   text-shadow: 2px 2px 8px red;
 }
 
+.GTMh2 {
+  color: white;
+}
+
+.h3GMT {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* materialize footer */
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer.page-footer {
+  color: white;
+  background-color:red;
+  text-align: center;
+  width: 100%;
+}
