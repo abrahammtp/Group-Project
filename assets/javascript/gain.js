@@ -1,67 +1,43 @@
 //// FRANCISCO RECIPE API
 
-var restrictions;
-var calories;
-        // Calories to build 2700-2800; Calories to Maintain 2200-2600; Calories to Lose 1900-2100
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDEmxMDDijs5LUlrmYMNv36_Nlx5ipH-Ls",
+    authDomain: "gmt-fitness.firebaseapp.com",
+    databaseURL: "https://gmt-fitness.firebaseio.com",
+    projectId: "gmt-fitness",
+    storageBucket: "",
+    messagingSenderId: "273381506828"
+  };
+  firebase.initializeApp(config);
 
-var search;
 
 
 $(document).ready(function () {
-
-/// GAIN PAGE
-
-    var gainqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=high-protein&app_id=19a5b37e&app_key=4dfc6f3ac6f5ba472fd75d9f42924272&from=0&to=4&calories=2700-2800"
-
-    $.ajax({
-       url: gainqueryURL,
-       method: "GET"
-    }).then(function(response){
-        var results = response.hits
-        console.log(results)
-        
-        for (var i = 0; i < results.length; i++) {
-
-            var dataImage = $("<img>");
-            dataImage.attr("src", results[i].recipe.image)
-            // dataImage.attr("href ='",  results[i].recipe.url);
-
-
-            var newItemdiv = $('<div class="newItem">');
-            var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>").append(
-
-
-                newItemdiv.append(dataImage),
-
-            )
-            $("#recipes").append(results[i].recipe.label + " Recipe:")
-            $("#recipes").append(link)
-            $('#recipe-input').val("");
-
-    }
-})
+    var recipesearch;
+    /// GAIN PAGE
 
     $("#add-recipe").on("click", function (event) {
         $("#recipes").empty();
         event.preventDefault();
 
-        search = $("#recipeinput").val().trim();
+        recipesearch = $("#recipeinput").val().trim();
 
 
         console.log("hello")
 
-        console.log(search)
-        var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + search + "&app_id=19a5b37e&app_key=4dfc6f3ac6f5ba472fd75d9f42924272&from=0&to=4"
+        console.log(recipesearch)
+        var newqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipesearch + "&app_id=19a5b37e&app_key=4dfc6f3ac6f5ba472fd75d9f42924272&from=0&to=4&calories=2700-2800&health=high-protein"
 
         $.ajax({
-            url: queryURL,
+            url: newqueryURL,
             method: "GET"
         }).then(function (response) {
 
             var results = response.hits
             console.log(results)
 
-
+            $("#recipes").html("<h3>Click an image to go to the recipe!</h3>")
 
             for (var i = 0; i < results.length; i++) {
 
@@ -72,8 +48,8 @@ $(document).ready(function () {
                 var newItemdiv = $('<div class="newItem">');
                 var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>");
                 var recipetext = ("<p id='recipetext'>" + results[i].recipe.label + " Recipe: </p>")
-                        
-                
+
+
                 link.append(newItemdiv)
                 newItemdiv.append(recipetext)
                 newItemdiv.append(dataImage)
@@ -119,7 +95,7 @@ $(document).ready(function () {
 
                 $(".carousel-inner").append(dataVideo);
             }
-        
+
         });
 
         $("#exercise-input").val("");
