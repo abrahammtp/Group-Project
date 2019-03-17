@@ -93,7 +93,7 @@
   margin-right: 20px;
   margin-bottom: 80px;
   border-radius: 2.5em;
-  background: grey;
+  background: black;
 }
 
 
@@ -139,7 +139,38 @@ main {
 
 footer.page-footer {
   color: white;
-  background-color:red;
+  /* background-color:red; */
   text-align: center;
   width: 100%;
+  background-image: linear-gradient(to bottom left, red, black);
 }
+
+
+
+form {
+  padding: 15px 25px 15px 25px;
+  
+  width: 500px;
+  border: 2px solid red;
+  border-radius: 2.5em;
+}
+
+.inquirecontact {
+  padding: 10px 20px 10px 20px;
+  
+  width: 500px;
+  border: 2px solid red;
+  border-radius: 2.5em;
+  height: 350px;
+}
+
+.inquiretext {
+  color: white;
+  margin-left: 20px;
+  letter-spacing: 1.5px;
+}
+
+.formlabel {  
+color: white;
+}
+  
