@@ -1,5 +1,4 @@
 //// FRANCISCO RECIPE API
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyDEmxMDDijs5LUlrmYMNv36_Nlx5ipH-Ls",
@@ -75,6 +74,7 @@ $(document).ready(function () {
 
     $("#add-exercise").on("click", function (event) {
         event.preventDefault();
+        $(".carousel-inner").empty();
 
         search = $("#exercise-input").val().trim();
         console.log("hello " + search);
@@ -91,7 +91,7 @@ $(document).ready(function () {
 
             for (let i = 0; i < results.length; i++) {
 
-                var dataVideo = $("<div class='carousel-item'><div class='embed-responsive embed-responsive-4by3'><iframe width='560' height='315' class='embed-responsive-item' src='https://www.youtube.com/embed/" + results[i].id.videoId + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div></div>");
+                var dataVideo = $("<div class='carousel-item-active'><div class='embed-responsive embed-responsive-4by3'><iframe class='embed-responsive-item' iframe width='560' height='315' src='https://www.youtube.com/embed/" + results[i].id.videoId + "' frameborder='0' allow='accelerometer; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div></div>");
 
                 $(".carousel-inner").append(dataVideo);
             }
@@ -100,7 +100,10 @@ $(document).ready(function () {
 
         $("#exercise-input").val("");
     })
+
 })
+
+
 
 
 
