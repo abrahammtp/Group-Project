@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>GMT | Trim</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-</head>
-
-
 <title>GMT Fit | Trim</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!---- firebase link -->
+<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
+
 <!-- Reset CSS -->
 <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
 <!-- Materialize CSS CDN -->
@@ -70,7 +61,7 @@
                     </div>
                 </form>
 
-                
+
                 <!-- carousel for youtbve videos -->
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -100,18 +91,18 @@
                     <center>Suggested Recipes To Hit Daily Caloric Intake</center>
                 </h2>
                 <form id="recipe-form">
-                        <label for="recipeinput">What food do you want to try?</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                            </div>
-                            <input id="recipeinput" type="text" class="form-control" placeholder="ex: Vegan Pasta ">
-                            <button id="add-recipe" type="button" class="btn btn-warning">Submit</button>
+                    <label for="recipeinput">What food do you want to try?</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
                         </div>
-    
-                    <div id="recipes">
-                          
+                        <input id="recipeinput" type="text" class="form-control" placeholder="ex: Vegan Pasta ">
+                        <button id="add-recipe" type="button" class="btn btn-warning">Submit</button>
                     </div>
-                                </form>
+
+                    <div id="recipes">
+
+                    </div>
+                </form>
             </div>
             <div class="row">
                 <div class="col-sm-6"><br><br></div>
@@ -120,17 +111,17 @@
             </div>
         </div>
 
-</div>
+    </div>
 
 
-   <!-- FOOTER -->
-   <footer class="page-footer">
+    <!-- FOOTER -->
+    <footer class="page-footer">
         <div class="footer-copyright">
-          <div class="container">
-          © 2014 Copyright Text
-          </div>
+            <div class="container">
+                © 2014 Copyright Text
+            </div>
         </div>
-      </footer>
+    </footer>
 
     <!-- JQuery 3.x uncompressed link -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"
@@ -142,7 +133,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-        <!-- Marertialize CDN -->
+    <!-- Marertialize CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- JavaScript file -->
     <script src="assets/javascript/trim.js"></script>

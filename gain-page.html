@@ -8,8 +8,9 @@
     <title>GMT Fit | Gain</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!---- firebase link -->
-    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-    <!-- Reset CSS -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
+      <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -64,7 +65,7 @@
                         <input id="exercise-input" type="text" class="form-control" placeholder="ex: Biceps Workouts ">
                         <button id="add-exercise" type="button" class="btn btn-warning">Submit</button>
                     </div>
-                </form>
+                
 
 
                 <!-- carousel for youtube videos -->
@@ -88,9 +89,11 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+            
                 <!-- /carousel -->
 
             </div>
+        </form>
             <div class="col-sm-6 container">
                 <h2 class="GTMh2">
                     <center>Suggested Recipes To Hit Daily Caloric Intake</center>
