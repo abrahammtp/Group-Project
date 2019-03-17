@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>GMT Fit | Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!---- firebase link -->
+       <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
+   
     <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <!-- Materialize CSS CDN -->
@@ -71,7 +75,7 @@
                 <form>
                     <div class="form-group">
                         <label class="formlabel" for="exampleFormControlInput1">Email Address:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                        <input id="email" type="email" class="form-control" id="exampleFormControlInput1"
                             placeholder="name@example.com">
                     </div>
                     <div class="form-group">
@@ -86,10 +90,10 @@
                     </div>
                  
                     <div class="form-group">
-                        <label class="formlabel" for="exampleFormControlTextarea1">Describe Your Goals</label>
+                        <label class="formlabel" id="contact" for="exampleFormControlTextarea1">Describe Your Goals</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    <a href=""><button class="btn btn-outline-primary" style="margin-top: 2px;">Submit</button></a>
+                    <a href=""><button id="contact" class="btn btn-outline-primary" style="margin-top: 2px;">Submit</button></a>
             </div>
                 </form>
 

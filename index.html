@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>GMT Fit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!---- firebase link -->
+       <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
+   
     <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <!-- Materialize CSS CDN -->
@@ -53,14 +57,14 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-2"></div>
    
-            <div class="col-sm-4"><input type="text" name="email" value="    Enter email to subscribe"  style="
+            <div class="col-sm-4"><input type="text" id="subscribe" name="email" placeholder="    Enter email to subscribe"  style="
                 width: 212px;
                 margin-right: 7px;
                 border: 2px solid red;
                 border-radius: 4px;
                 color: lightgrey;
             ">
-            <a href=""><button class="btn btn-outline-primary" style="margin-top: -2px;">SUBSCRIBE</button></a>
+            <a href=""><button id="subscibe" class="btn btn-outline-primary" style="margin-top: -2px;">SUBSCRIBE</button></a>
         </div>
             
        
