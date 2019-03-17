@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>GMT Fit | Maintain</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---- firebase link -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
     <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <!-- Materialize CSS CDN -->
@@ -57,50 +60,32 @@
                         <input id="exercise-input" type="text" class="form-control" placeholder="ex: Biceps Workouts ">
                         <button id="add-exercise" type="button" class="btn btn-warning">Submit</button>
                     </div>
-                </form>
 
-
-                <!-- carousel for youtube videos -->
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item-active">
-                            <div class="embed-responsive embed-responsive-4by3">
-                                <iframe class="embed-responsive-item" iframe width=" 560" height="315"
-                                    src="https://www.youtube.com/embed/Yz7Ofr9z1co" frameborder="0"
-                                    allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </div>
+                    <div class="exercise-videos">
+                        <iframe class="embed-responsive-item" iframe width=" 445" height="315"
+                            src="https://www.youtube.com/embed/Yz7Ofr9z1co" frameborder="0"
+                            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                <!-- /carousel -->
-
+                </form>
             </div>
             <div class="col-sm-6">
                 <h2 class="GTMh2">
                     <center>Suggested Recipes To Hit Daily Caloric Intake</center>
                 </h2>
                 <form id="recipe-form">
-                        <label for="recipeinput">What food do you want to try?</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                            </div>
-                            <input id="recipeinput" type="text" class="form-control" placeholder="ex: Vegan Pasta ">
-                            <button id="add-recipe" type="button" class="btn btn-warning">Submit</button>
+                    <label for="recipeinput">What food do you want to try?</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
                         </div>
-    
-                    <div id="recipes">
-                          
+                        <input id="recipeinput" type="text" class="form-control" placeholder="ex: Vegan Pasta ">
+                        <button id="add-recipe" type="button" class="btn btn-warning">Submit</button>
                     </div>
-                                </form>
+
+                    <div id="recipes">
+
+                    </div>
+                </form>
             </div>
             <div class="row">
                 <div class="col-sm-6"><br><br></div>
@@ -108,21 +93,21 @@
 
             </div>
         </div>
-</div>
+    </div>
 
-        <!-- FOOTER -->
-        <footer class="page-footer">
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2014 Copyright Text
-                </div>
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
             </div>
-        </footer>
+        </div>
+    </footer>
 
 
     <!-- JQuery 3.x uncompressed link -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <!-- Bootstrap JS Link -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -132,8 +117,8 @@
         crossorigin="anonymous"></script>
     <!-- Marertialize CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- JavaScript file -->
-  <script src="assets/javascript/maintain.js"></script>
+    <!-- JavaScript file -->
+    <script src="assets/javascript/maintain.js"></script>
 
 </body>
 
