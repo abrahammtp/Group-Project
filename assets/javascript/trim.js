@@ -1,94 +1,68 @@
 //// FRANCISCO RECIPE API
-
-var restrictions;
-var calories;
-        // Calories to build 2700-2800; Calories to Maintain 2200-2600; Calories to Lose 1900-2100
-
-var search;
-
-
-$(document).ready(function () {
-
-/// TRIM PAGE
-
-    var trimqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=high-protein&app_id=19a5b37e&app_key=4dfc6f3ac6f5ba472fd75d9f42924272&from=0&to=4&calories=1900-2100"
-
-    $.ajax({
-       url: trimqueryURL,
-       method: "GET"
-    }).then(function(response){
-        var results = response.hits
-        console.log(results)
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDEmxMDDijs5LUlrmYMNv36_Nlx5ipH-Ls",
+    authDomain: "gmt-fitness.firebaseapp.com",
+    databaseURL: "https://gmt-fitness.firebaseio.com",
+    projectId: "gmt-fitness",
+    storageBucket: "",
+    messagingSenderId: "273381506828"
+  };
+  firebase.initializeApp(config);
+        var recipesearch;
+        $(document).ready(function () {
+            var recipesearch;
+            /// maintain PAGE
         
-        for (var i = 0; i < results.length; i++) {
-
-            var dataImage = $("<img>");
-            dataImage.attr("src", results[i].recipe.image)
-            // dataImage.attr("href ='",  results[i].recipe.url);
-
-
-            var newItemdiv = $('<div class="newItem">');
-            var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>").append(
-
-
-                newItemdiv.append(dataImage),
-
-            )
-            $("#test").append(results[i].recipe.label + " Recipe:")
-            $("#test").append(link)
-            $('#userinput').val("");
-
-    }
-})
-
-    $("#button").on("click", function (event) {
-        $("#test").empty();
-        event.preventDefault();
-
-        search = $("#userinput").val().trim();
-
-
-        console.log("hello")
-
-        console.log(search)
-        var queryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + search + "&app_id=19a5b37e&app_key=4dfc6f3ac6f5ba472fd75d9f42924272&from=0&to=4"
-
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function (response) {
-
-            var results = response.hits
-            console.log(results)
-
-
-
-            for (var i = 0; i < results.length; i++) {
-
-                var dataImage = $("<img>");
-                dataImage.attr("src", results[i].recipe.image)
-                // dataImage.attr("href ='",  results[i].recipe.url);
-
-
-                var newItemdiv = $('<div class="newItem">');
-                var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>").append(
-
-
-                    newItemdiv.append(dataImage),
-
-                )
-                $("#test").append(results[i].recipe.label + " Recipe:")
-                $("#test").append(link)
-                $('#userinput').val("");
-            }
+            $("#add-recipe").on("click", function (event) {
+                $("#recipes").empty();
+                event.preventDefault();
+        
+                recipesearch = $("#recipeinput").val().trim();
+        
+        
+                console.log("hello")
+        
+                console.log(recipesearch)
+                var newqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipesearch + "&app_id=19a5b37e&app_key=4dfc6f3ac6f5ba472fd75d9f42924272&from=0&to=4&calories=500-700"
+        
+                $.ajax({
+                    url: newqueryURL,
+                    method: "GET"
+                }).then(function (response) {
+        
+                    var results = response.hits
+                    console.log(results)
+        
+                    $("#recipes").html("<h3>Click an image to go to the recipe!</h3>")
+        
+                    for (var i = 0; i < results.length; i++) {
+        
+                        var dataImage = $("<img>");
+                        dataImage.attr("src", results[i].recipe.image)
+                        dataImage.addClass("recipeimages")
+        
+                        var newItemdiv = $('<div class="newItem">');
+                        var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>");
+                        var recipetext = ("<p id='recipetext'>" + results[i].recipe.label + " Recipe: </p>")
+        
+        
+                        link.append(newItemdiv)
+                        newItemdiv.append(recipetext)
+                        newItemdiv.append(dataImage)
+        
+        
+                        $("#recipes").append(link)
+                        $('#recipeinput').val("");
+                    }
+                });
+        
+            });
+        
         });
-
-    });
-
-});
-
-/// FRANCISCO END RECIPE API
-
+        
+        /// FRANCISCO END RECIPE API    
+    
 // Abraham's work, YouTube's API
 
 var search;

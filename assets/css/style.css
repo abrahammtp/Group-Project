@@ -63,7 +63,7 @@
 
 
   #recipes {
-    max-width:40%;
+    max-width:500px;
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
@@ -76,10 +76,10 @@
   .recipeimages {
     display: flex;
     flex-wrap: wrap;
-    max-width:120px;
-    max-height: 100px;
-    overflow: auto;
+   
+
   }
+
 
 
 
@@ -149,10 +149,11 @@ footer.page-footer {
 
 form {
   padding: 15px 25px 15px 25px;
-  
-  width: 500px;
+  max-width: 500px;
+  max-height: 600px;
   border: 2px solid red;
   border-radius: 2.5em;
+  overflow: scroll;
 }
 
 .inquirecontact {
