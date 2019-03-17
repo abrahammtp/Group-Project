@@ -71,7 +71,7 @@ $(document).ready(function () {
 
     $("#add-exercise").on("click", function (event) {
         event.preventDefault();
-        $(".carousel-inner").empty();
+        $(".exercise-videos").empty();
 
         search = $("#exercise-input").val().trim();
         console.log("hello " + search);
@@ -88,9 +88,9 @@ $(document).ready(function () {
 
             for (let i = 0; i < results.length; i++) {
 
-                var dataVideo = $("<div class='carousel-item-active'><div class='embed-responsive embed-responsive-4by3'><iframe class='embed-responsive-item' iframe width='560' height='315' src='https://www.youtube.com/embed/" + results[i].id.videoId + "' frameborder='0' allow='accelerometer; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div></div>");
+                var dataVideo = $("<div class='carousel-item-active'><div class='embed-responsive embed-responsive-4by3'><iframe class='embed-responsive-item' iframe width='445' height='315' src='https://www.youtube.com/embed/" + results[i].id.videoId + "' frameborder='0' allow='accelerometer; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div></div>");
 
-                $(".carousel-inner").append(dataVideo);
+                $(".exercise-videos").append(dataVideo);
             }
 
         });
