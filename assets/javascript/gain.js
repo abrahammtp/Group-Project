@@ -26,7 +26,7 @@ $(document).ready(function () {
         console.log("hello")
 
         console.log(recipesearch)
-        var newqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipesearch + "&app_id=19a5b37e&app_key=4dfc6f3ac6f5ba472fd75d9f42924272&from=0&to=4&calories=2700-2800&health=high-protein"
+        var newqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipesearch + "&app_id=a8657a0b&app_key=acd4055d85d009d439ef0099280377ef&from=0&to=4&calories=2100-2500"
 
         $.ajax({
             url: newqueryURL,
@@ -36,25 +36,26 @@ $(document).ready(function () {
             var results = response.hits
             console.log(results)
 
-            $("#recipes").html("<h3>Click an image to go to the recipe!</h3>")
+            $("#recipes").prepend("<h3>Click an image to go to the recipe!</h3>")
 
             for (var i = 0; i < results.length; i++) {
+                var firstDiv = $('<div id="recipecards" class="card" style="width: 18rem;">')
+                var dataImage = $('<img id="recipeimages" src="' + results[i].recipe.image + '" class="card-img-top"></img>');
 
-                var dataImage = $("<img>");
-                dataImage.attr("src", results[i].recipe.image)
-                dataImage.addClass("recipeimages")
-
-                var newItemdiv = $('<div class="newItem">');
+                var newItemdiv = $('<div class="card-body">');
                 var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>");
-                var recipetext = ("<p id='recipetext'>" + results[i].recipe.label + " Recipe: </p>")
+                var recipetext = ("<p class='card-text'>" + results[i].recipe.label + " Recipe </p>")
+                var closeDiv = $('<a href="'+results[i].recipe.url+'" target="_blank" style="margin:20px" class="btn btn-danger">Go to recipe</a>')
 
-
-                link.append(newItemdiv)
+                
+                $("#recipes").append(firstDiv)
+                firstDiv.append(dataImage, newItemdiv, closeDiv)
                 newItemdiv.append(recipetext)
-                newItemdiv.append(dataImage)
+
+                // recipetext.append(closeDiv)
 
 
-                $("#recipes").append(link)
+                $("#recipecards").append(link)
                 $('#recipeinput').val("");
             }
         });

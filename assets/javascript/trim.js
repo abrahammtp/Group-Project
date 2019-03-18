@@ -24,7 +24,7 @@ var config = {
                 console.log("hello")
         
                 console.log(recipesearch)
-                var newqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipesearch + "&app_id=19a5b37e&app_key=4dfc6f3ac6f5ba472fd75d9f42924272&from=0&to=4&calories=500-700"
+                var newqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipesearch + "&app_id=a8657a0b&app_key=acd4055d85d009d439ef0099280377ef&from=0&to=4&calories=500-700"
         
                 $.ajax({
                     url: newqueryURL,
