@@ -169,6 +169,7 @@ form {
 color: white;
 }
 
+
 .card-text {
   color: black;
 }
@@ -176,3 +177,15 @@ color: white;
 .btn-danger {
   background: red;
 }
+.card-body {
+  padding: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.card {
+  height: 338px;
+}
+  
+
