@@ -9,61 +9,64 @@ var config = {
     messagingSenderId: "273381506828"
   };
   firebase.initializeApp(config);
-var recipesearch;
-    $(document).ready(function () {
-        var recipesearch;
-        /// maintain PAGE
-    
-        $("#add-recipe").on("click", function (event) {
-            $("#recipes").empty();
-            event.preventDefault();
-    
-            recipesearch = $("#recipeinput").val().trim();
-    
-    
-            console.log("hello")
-    
-            console.log(recipesearch)
-            var newqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipesearch + "&app_id=a8657a0b&app_key=acd4055d85d009d439ef0099280377ef&to=4&calories=1800-2000"
-    
-            $.ajax({
-                url: newqueryURL,
-                method: "GET"
-            }).then(function (response) {
-    
-                var results = response.hits
-                console.log(results)
-    
-                $("#recipes").html("<h3>Click an image to go to the recipe!</h3>")
-    
-                for (var i = 0; i < results.length; i++) {
-    
-                    var dataImage = $("<img>");
-                    dataImage.attr("src", results[i].recipe.image)
-                    dataImage.addClass("recipeimages")
-    
-                    var newItemdiv = $('<div class="newItem">');
-                    var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>");
-                    var recipetext = ("<p id='recipetext'>" + results[i].recipe.label + " Recipe: </p>")
-    
-    
-                    link.append(newItemdiv)
-                    newItemdiv.append(recipetext)
-                    newItemdiv.append(dataImage)
-    
-    
-                    $("#recipes").append(link)
-                    $('#recipeinput').val("");
-                }
-            });
-    
-        });
-    
-    });
-    
-    /// FRANCISCO END RECIPE API    
 
-    // Abraham's work, YouTube's API
+
+
+$(document).ready(function () {
+    var recipesearch;
+    /// GAIN PAGE
+
+    $("#add-recipe").on("click", function (event) {
+        $("#recipes").empty();
+        event.preventDefault();
+
+        recipesearch = $("#recipeinput").val().trim();
+
+
+        console.log("hello")
+
+        console.log(recipesearch)
+        var newqueryURL = "https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=" + recipesearch + "&app_id=a8657a0b&app_key=acd4055d85d009d439ef0099280377ef&from=0&to=4&calories=1800-2000"
+
+        $.ajax({
+            url: newqueryURL,
+            method: "GET"
+        }).then(function (response) {
+
+            var results = response.hits
+            console.log(results)
+
+
+            for (var i = 0; i < results.length; i++) {
+                var firstDiv = $('<div id="recipecards" class="card p-2" style="width: 18rem;">')
+                var dataImage = $('<img id="recipeimages" src="' + results[i].recipe.image + '" class="card-img-top"></img>');
+
+                var newItemdiv = $('<div class="card-body">');
+                var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>");
+                var recipetext = ("<p class='card-text'>" + results[i].recipe.label + "</p>")
+                var closeDiv = $('<a href="'+results[i].recipe.url+'" target="_blank" style="margin:20px" class="btn btn-danger">Go to recipe</a>')
+
+                
+                $("#recipes").append(firstDiv)
+                firstDiv.append(dataImage, newItemdiv, closeDiv)
+                newItemdiv.append(recipetext)
+
+                // recipetext.append(closeDiv)
+
+
+                $("#recipecards").append(link)
+                $('#recipeinput').val("");
+            }
+        });
+
+    });
+
+});
+
+/// FRANCISCO END RECIPE API
+
+
+// Abraham's work, YouTube's API
 
 var search;
 
@@ -99,6 +102,8 @@ $(document).ready(function () {
     })
 
 })
+
+
 
 
 

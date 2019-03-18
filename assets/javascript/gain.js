@@ -36,15 +36,14 @@ $(document).ready(function () {
             var results = response.hits
             console.log(results)
 
-            $("#recipes").prepend("<h3>Click an image to go to the recipe!</h3>")
 
             for (var i = 0; i < results.length; i++) {
-                var firstDiv = $('<div id="recipecards" class="card" style="width: 18rem;">')
+                var firstDiv = $('<div id="recipecards" class="card p-2" style="width: 18rem;">')
                 var dataImage = $('<img id="recipeimages" src="' + results[i].recipe.image + '" class="card-img-top"></img>');
 
                 var newItemdiv = $('<div class="card-body">');
                 var link = $("<a href='" + results[i].recipe.url + "' target='_blank'>");
-                var recipetext = ("<p class='card-text'>" + results[i].recipe.label + " Recipe </p>")
+                var recipetext = ("<p class='card-text'>" + results[i].recipe.label + "</p>")
                 var closeDiv = $('<a href="'+results[i].recipe.url+'" target="_blank" style="margin:20px" class="btn btn-danger">Go to recipe</a>')
 
                 
