@@ -99,21 +99,15 @@ background-size: cover;
 
 
   #recipes {
-    max-width:500px;
+    max-width:250px;
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
+    margin-left: 0px;
   }
 
   .recipetext{
     font-size: 5px;
-  }
-
-  .recipeimages {
-    display: flex;
-    flex-wrap: wrap;
-   
-
   }
 
 
@@ -211,6 +205,7 @@ form {
 color: white;
 }
 
+
 #btn {
   position: absolute;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -224,4 +219,25 @@ color: white;
   background: white;
 
 }
+
+
+.card-text {
+  color: black;
+}
+
+.btn-danger {
+  background: red;
+}
+.card-body {
+  padding: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.card {
+  height: 338px;
+}
+  
+
 

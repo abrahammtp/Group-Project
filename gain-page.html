@@ -10,7 +10,6 @@
     <!---- firebase link -->
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-database.js"></script>
-    <!-- Reset CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -66,14 +65,21 @@
                         <button id="add-exercise" type="button" class="btn btn-warning">Submit</button>
                     </div>
 
-                    <div class="exercise-videos">
-                        <iframe class="embed-responsive-item" iframe width=" 445" height="315"
-                            src="https://www.youtube.com/embed/Yz7Ofr9z1co" frameborder="0"
-                            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                    <div class="videos">
+                        <div class="card" style="width: 400">
+                            <div class="card-body">
+                                <div class="card-video">
+                                    <iframe class="embed-responsive-item" iframe width="443" height="335"
+                                        src="https://www.youtube.com/embed/Fv5xEYhvj4Q" frameborder="0"
+                                        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
                     </div>
             </div>
             </form>
+
             <div class="col-sm-6 container">
                 <h2 class="GTMh2">
                     <center>Suggested Recipes To Hit Daily Caloric Intake</center>
@@ -87,8 +93,13 @@
                         <button id="add-recipe" type="button" class="btn btn-warning">Submit</button>
                     </div>
 
-                    <div id="recipes">
-
+                    <div id="recipes" class="d-flex p-3">
+                        <!-- <div id="recipecards" class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div> -->
+                          </div>
                     </div>
                 </form>
             </div>
