@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 
             for (var i = 0; i < results.length; i++) {
-                var firstDiv = $('<div id="recipecards" class="card p-2" style="width: 18rem;">')
+                var firstDiv = $('<div id="recipecards" class="card p-2 recipeCard" style="width: 18rem;">')
                 var dataImage = $('<img id="recipeimages" src="' + results[i].recipe.image + '" class="card-img-top"></img>');
 
                 var newItemdiv = $('<div class="card-body">');
