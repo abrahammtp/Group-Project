@@ -63,21 +63,15 @@
 
 
   #recipes {
-    max-width:500px;
+    max-width:250px;
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
+    margin-left: 0px;
   }
 
   .recipetext{
     font-size: 5px;
-  }
-
-  .recipeimages {
-    display: flex;
-    flex-wrap: wrap;
-   
-
   }
 
 
@@ -175,6 +169,14 @@ form {
 color: white;
 }
 
+
+.card-text {
+  color: black;
+}
+
+.btn-danger {
+  background: red;
+}
 .card-body {
   padding: 0px;
   padding-right: 0px;
@@ -186,3 +188,4 @@ color: white;
   height: 338px;
 }
   
+
