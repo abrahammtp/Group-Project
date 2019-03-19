@@ -12,8 +12,8 @@ var database = firebase.database();
 
 // Initial Values
 var subscribe = "";
-var email = "";
-var goalsText = "";
+// var email = "";
+// var goalsText = "";
 // Capture Button Click
 $("#subscibe").on("click", function(event) {
   event.preventDefault();
@@ -29,18 +29,18 @@ $("#subscibe").on("click", function(event) {
   });
 });
 
-$("#contact-submit").on("click", function(event){
-    console.log("Click");
-    event.preventDefault();
+// $("#contact-submit").on("click", function(event){
+//     console.log("Click");
+//     event.preventDefault();
 
-    email = $("#email").val().trim();
-    // helpForm = $("#exampleFormControlSelect1").val();
-    goalsText = $("#exampleControlTextArea1").val().trim();
+//     email = $("#email").val().trim();
+//     // helpForm = $("#exampleFormControlSelect1").val();
+//     goalsText = $("#exampleControlTextArea1").val().trim();
 
-    database.ref().push({
-        email: email,
-        // helpForm: helpForm,
-        goalsText: goalsText,
-    });
-});
+//     database.ref().push({
+//         email: email,
+//         // helpForm: helpForm,
+//         goalsText: goalsText,
+//     });
+// });
 
