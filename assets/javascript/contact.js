@@ -10,24 +10,12 @@ var config = {
 
 var database = firebase.database();
 
-// Initial Values
-var subscribe = "";
+// Initial values, these are the values we want to capture and then push to the database
 var email = "";
+// var helpForm = "";
 var goalsText = "";
-// Capture Button Click
-$("#subscibe").on("click", function(event) {
-  event.preventDefault();
 
-
-  // Grabbed values from text boxes
-  subscribe = $("#subscribe").val().trim();
-  // contact = $("#contact").val().trim();
-  // Code for handling the push
-  database.ref().push({
-    subscribe: subscribe,
-    // contact: contact,
-  });
-});
+// Capture the button click and assing a value to the variables
 
 $("#contact-submit").on("click", function(event){
     console.log("Click");
@@ -43,4 +31,6 @@ $("#contact-submit").on("click", function(event){
         goalsText: goalsText,
     });
 });
+
+
 
