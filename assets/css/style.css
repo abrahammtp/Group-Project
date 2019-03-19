@@ -225,7 +225,7 @@ color: white;
 .card-text {
   color: white;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .btn-danger {
@@ -257,7 +257,7 @@ color: white;
 }
 .recipeCard {
   margin-right: 15px;
-  max-width: 200px;
+  max-width: 190px;
 }
 
 
