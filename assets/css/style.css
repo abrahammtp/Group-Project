@@ -5,7 +5,7 @@
   rgba(255, 0, 0, 0.473), 
   rgba(0, 0, 0, 0.459)
 ), */
-url(https://images.pexels.com/photos/841128/pexels-photo-841128.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+url(https://images.pexels.com/photos/841128/pexels-photo-841128.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
 background-repeat: no-repeat;
 background-attachment: fixed;
 /* color:white !important; */
@@ -152,7 +152,7 @@ h1 {
 
 .h3GMT {
   margin-left: 20px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 /* materialize footer */
@@ -214,6 +214,8 @@ color: white;
 
 #recipe-form {
   background: white;
+  /* padding-bottom: 346px; */
+
 }
 #exercise-form{
   background: white;
