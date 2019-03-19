@@ -99,11 +99,12 @@ background-size: cover;
 
 
   #recipes {
-    max-width:250px;
+    /* max-width:250px; */
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
     margin-left: 0px;
+    padding-left: 0px;
   }
 
   .recipetext{
@@ -222,11 +223,20 @@ color: white;
 
 
 .card-text {
-  color: black;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .btn-danger {
-  background: red;
+  background: lightslategray;
+  border: 1px lightslategrey solid
+}
+.btn-danger:hover {
+  background: lightslategray;
+  border: 1px lightslategrey solid
+
+
 }
 .card-body {
   padding: 0px;
@@ -236,8 +246,18 @@ color: white;
 }
 
 .card {
-  height: 338px;
+  background: black;
+  height:338px;
+
 }
   
+.card-body {
+  background: black;
+  max-height: 335px;
+}
+.recipeCard {
+  margin-right: 15px;
+  max-width: 200px;
+}
 
 
