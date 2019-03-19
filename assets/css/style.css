@@ -15,12 +15,6 @@ background-size: cover;
 
 
 
-/* .jumbotron {
-    background-image: url(http://blog.anytimefitness.com/wp-content/uploads/2017/01/AMKT16990_Monday_HIIT_Header.jpg), linear-gradient(to bottom right, red, black);
-    /* background-image: linear-gradient(to bottom right, red, black); */
-    /* height: 200px;  */
-
-
 
 
 .jumtrotron-h-one {
@@ -112,13 +106,6 @@ background-size: cover;
   }
 
 
-
-
-.rowone {
-  margin-left: 15px;
-  border:1px solid red;
-}
-
 .col-sm {
   border: 2px solid red;
   margin-right: 20px;
@@ -135,11 +122,14 @@ body {
 
 p {
   color: white;
+  margin-left: 5px;
+  padding: 10px 10px 10px 10px;
 }
 
 h3 {
   color: white;
   text-shadow: 2px 2px 8px red;
+  font-size: 35px;
 }
 
 h1 {
@@ -149,10 +139,16 @@ h1 {
 
 .GTMh2 {
   color: white;
+  text-shadow: 2px 2px 8px red;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: .7px;
 }
 
 .h3GMT {
-  margin-left: 20px;
+margin-right: 30px;
+  letter-spacing: 2px;
+  text-align: center;
   /* margin-top: 10px; */
 }
 
@@ -263,3 +259,8 @@ color: white;
 }
 
 
+.subscribeinoutbtn {
+  margin-left: 941px;
+  width: 100%;
+  margin-top: -20px;
+}
