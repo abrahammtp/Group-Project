@@ -1,14 +1,8 @@
 /* JUMBOTRON STYLE HERE */
 .jumbotron{
-  background: 
-/* linear-gradient(
-  rgba(255, 0, 0, 0.473), 
-  rgba(0, 0, 0, 0.459)
-), */
-url(https://images.pexels.com/photos/841128/pexels-photo-841128.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+  background: url(https://images.pexels.com/photos/841128/pexels-photo-841128.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
 background-repeat: no-repeat;
 background-attachment: fixed;
-/* color:white !important; */
 height: 200px;
 background-size: cover;
 }
@@ -135,6 +129,9 @@ h3 {
 h1 {
   color: white;
   text-shadow: 2px 2px 8px black;
+  text-shadow: 2px 2px 8px red;
+  margin-left: 38px;
+  margin-bottom: -10px;
 }
 
 .GTMh2 {
@@ -258,4 +255,9 @@ color: white;
   max-width: 190px;
 }
 
+.col-sm-4 {
+
+  margin-top: -15px;
+
+}
 
