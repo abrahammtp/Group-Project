@@ -140,7 +140,7 @@ h1 {
 .GTMh2 {
   color: white;
   text-shadow: 2px 2px 8px red;
-  font-size: 35px;
+  font-size: 30px;
   text-align: center;
   letter-spacing: .7px;
 }
@@ -264,3 +264,12 @@ color: white;
   width: 100%;
   margin-top: -20px;
 }
+
+@media screen and (max-width: 640px) {
+  .jumtrotron-h-one {
+    margin-top: 40px;
+  }
+}
+
+
+
