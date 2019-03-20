@@ -7,10 +7,6 @@ height: 200px;
 background-size: cover;
 }
 
-
-
-
-
 .jumtrotron-h-one {
     text-align: center;
     color: white;
@@ -31,7 +27,6 @@ background-size: cover;
 .btn-outline-primary{
   border-color: white;
   color:white;
-  /* background-color: rgb(255, 255, 255, .35); */
   margin-top:30px;
   font-weight:100;
 }
@@ -65,15 +60,18 @@ background-size: cover;
 
 /* BUTTON HEADER RIGHT */
 .rightHeader{
-    position: absolute;
+    position: fixed;
     top: -15px;
     right: 8px;
+    size: inherit;
+    
   }
   /* BUTTON HEADER LEFT */
   .leftHeader{
-    position: absolute;
+    position: fixed;
     top: -15px;
-    left: 20px;
+    left: 5px;
+    
   }
   
   .container a {
@@ -85,9 +83,7 @@ background-size: cover;
     height:360px;
   }
 
-
   #recipes {
-    /* max-width:250px; */
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
@@ -100,8 +96,13 @@ background-size: cover;
   }
 
 
-
-
+.col-sm {
+  border: 2px solid red;
+  margin-right: 20px;
+  margin-bottom: 80px;
+  border-radius: 2.5em;
+  background: black;
+}
 
 
 body {
@@ -164,13 +165,10 @@ main {
 
 footer.page-footer {
   color: white;
-  /* background-color:red; */
   text-align: center;
   width: 100%;
   background-image: linear-gradient(to bottom left, red, black);
 }
-
-
 
 form {
   padding: 15px 25px 37px 25px;
@@ -182,42 +180,39 @@ form {
 }
 
 .inquirecontact {
-  padding: 10px 20px 10px 20px;
-  
-  width: 500px;
+  padding: 60px 20px 0px 20px;
+  max-width: 600px;
+  height: 350px;
   border: 2px solid red;
   border-radius: 2.5em;
-  height: 350px;
+  text-align: justify;
+  font-size: 18px;
+  overflow: auto;
 }
 
 .inquiretext {
   color: white;
-  margin-left: 20px;
+  margin-left: 0px;
   letter-spacing: 1.5px;
+  overflow: auto;
 }
 
 .formlabel {  
 color: white;
 }
 
-
-
 #btn {
   position: absolute;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-
 #recipe-form {
   background: white;
-  /* padding-bottom: 346px; */
-
 }
 #exercise-form{
   background: white;
 
 }
-
 
 .card-text {
   color: white;
@@ -232,9 +227,8 @@ color: white;
 .btn-danger:hover {
   background: lightslategray;
   border: 1px lightslategrey solid
-
-
 }
+
 .card-body {
   padding: 0px;
   padding-right: 0px;
@@ -262,7 +256,6 @@ color: white;
   margin-top: -15px;
 
 }
-
 
 .subscribeinoutbtn {
   margin-left: 941px;
