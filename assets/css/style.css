@@ -21,7 +21,11 @@ background-size: cover;
 }
 /* button styling for jumbotron */
 .btn{
+  position: relative;
     margin-right:10px;
+}
+.btn-group {
+  position: relative;
 }
 
 .btn-outline-primary{
@@ -60,7 +64,7 @@ background-size: cover;
 
 /* BUTTON HEADER RIGHT */
 .rightHeader{
-    position: fixed;
+    position: absolute;
     top: -15px;
     right: 8px;
     size: inherit;
@@ -68,11 +72,12 @@ background-size: cover;
   }
   /* BUTTON HEADER LEFT */
   .leftHeader{
-    position: fixed;
+    position: absolute;
     top: -15px;
     left: 5px;
     
   }
+  
   
   .container a {
     text-decoration: none;
