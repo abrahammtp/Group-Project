@@ -95,16 +95,6 @@ background-size: cover;
     font-size: 5px;
   }
 
-
-.col-sm {
-  border: 2px solid red;
-  margin-right: 20px;
-  margin-bottom: 80px;
-  border-radius: 2.5em;
-  background: black;
-}
-
-
 body {
   background: black;
 }
