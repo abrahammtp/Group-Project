@@ -1,6 +1,6 @@
 /* JUMBOTRON STYLE HERE */
 .jumbotron{
-  background: url(https://images.pexels.com/photos/841128/pexels-photo-841128.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+  background: url(../images/pexels-photo-841128.jpeg);
 background-repeat: no-repeat;
 background-attachment: fixed;
 height: 200px;
@@ -100,13 +100,7 @@ background-size: cover;
   }
 
 
-.col-sm {
-  border: 2px solid red;
-  margin-right: 20px;
-  margin-bottom: 80px;
-  border-radius: 2.5em;
-  background: black;
-}
+
 
 
 
@@ -114,10 +108,17 @@ body {
   background: black;
 }
 
-p {
+.p {
+  border: 2px solid red;
+  margin-right: 20px;
+  margin-bottom: 80px;
+  border-radius: 2.5em;
+  background: black;
   color: white;
   margin-left: 5px;
   padding: 10px 10px 10px 10px;
+  height: 77%;
+  padding: 15px;
 }
 
 h3 {
@@ -146,6 +147,7 @@ h1 {
   padding-top: 20px;
   letter-spacing: 2px;
   text-align: center;
+  margin-right: 23px;
 }
 
 /* materialize footer */
@@ -273,7 +275,4 @@ color: white;
     margin-top: 40px;
   }
 }
-
-
-
 
